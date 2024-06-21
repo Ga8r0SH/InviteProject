@@ -22,7 +22,7 @@
               <div class="time text-2xl">{{ countdown.seconds }}<span>секунд</span></div>
             </div>
           </div>
-          <div class="button flex justify-center items-center mt-8">
+          <div class="button flex justify-center items-center my-12">
             <button class="animated-button"><span class="textanimation">Перейти к приглашению</span></button>
           </div>
         </div>
@@ -180,6 +180,9 @@ export default {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  .animated-button{
+    display: none;
+  }
   .text-white {
     padding: 1rem;
   }
