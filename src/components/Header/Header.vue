@@ -9,7 +9,7 @@
             день рядом с нами были самые близкие и дорогие для нас люди. Будем
             рады разделить с вами чудесный праздник в день нашей свадьбы.</span>
           <span class="font-bold block my-8 text-xl">7 Сентября 2024 года</span>
-          <span class="block mt-4 text-xl">С любовью, София и Александр</span>
+          <span class="block mt-4 text-xl">С любовью, <i class="text-xl font-serif font-extrabold text-gray-300 shadow-lg">София и Александр</i></span>
           <div class="countdown-container mt-4">
             <div class="countdown-label text-sm mt-4">До свадьбы осталось:</div>
             <div class="countdown-timer mt-8">
@@ -181,7 +181,7 @@ export default {
 /* Responsive styles */
 @media (max-width: 768px) {
   .animated-button{
-    display: block;
+    display: none;
   }
   .text-white {
     padding: 1rem;
