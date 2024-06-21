@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class=" max-w-screen-2xl m-auto">
+    <div class=" m-auto">
       <router-view>
         
       </router-view>

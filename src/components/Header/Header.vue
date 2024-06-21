@@ -181,7 +181,7 @@ export default {
 /* Responsive styles */
 @media (max-width: 768px) {
   .animated-button{
-    display: none;
+    display: block;
   }
   .text-white {
     padding: 1rem;
