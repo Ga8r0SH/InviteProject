@@ -3,9 +3,11 @@
     <div class="m-auto">
       <Header />
       <div>
-
         <programDay />
         <place />
+        <detail />
+        <dressCode/>
+        <formVue/>
       </div>
     </div>
 
@@ -17,4 +19,7 @@
 import Header from '@/components/Header/Header.vue'
 import programDay from '@/components/programDay/programDay.vue'
 import place from '@/components/Place/place.vue'
+import detail from '@/components/Detals/Detals.vue'
+import dressCode from '@/components/DressCode/dressCode.vue'
+import formVue from '@/components/Form/form.vue'
 </script>

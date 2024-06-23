@@ -1,10 +1,10 @@
 <template>
     <div class="max-w-screen-xl mx-auto">
         <div class="flex justify-center mt-28">
-            <span class="w-[640px] h-[2px] bg-gray-300 inline-block text-center clip-path-arrow"></span>
+            <span class="w-[640px] h-[1px] bg-gray-300 inline-block text-center clip-path-arrow"></span>
         </div>
         <div class="mt-24 flex justify-center text-center">
-            <h1 class="text-4xl font-serif">Место проведения торжества</h1>
+            <h1 class="text-4xl font-serif mx-5">Место проведения торжества</h1>
         </div>
         <div class="mt-[40px] flex justify-center text-center">
             <p class="text-[22px] font-serif text-gray-600">
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="flex justify-center mt-28">
-            <span class="w-[640px] h-[2px] bg-gray-300 inline-block text-center clip-path-arrow"></span>
+            <span class="w-[640px] h-[1px] bg-gray-300 inline-block text-center clip-path-arrow"></span>
         </div>
     </div>
 </template>
