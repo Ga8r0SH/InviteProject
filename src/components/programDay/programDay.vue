@@ -1,5 +1,5 @@
 <template>
-    <div class=" max-w-screen-sm m-auto mt-24">
+    <div id="target-section" class=" max-w-screen-sm m-auto mt-24">
         <div class="mx-8">
             <div>
                 <h1 class="flex font-bold align-middle items-center justify-center font-serif text-3xl">Программа дня

@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="button flex justify-center items-center my-12">
-            <button class="animated-button"><span class="textanimation">Перейти к приглашению</span></button>
+            <button href="target-section" class="animated-button"><span class="textanimation">Перейти к приглашению</span></button>
           </div>
         </div>
       </div>

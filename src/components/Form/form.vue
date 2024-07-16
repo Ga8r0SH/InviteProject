@@ -20,8 +20,7 @@
                         <h3 class="mb-4 text-xl font-serif">Присутствие на торжестве</h3>
                         <div class="flex flex-col">
                             <label for="attending-yes" class="flex items-center mb-2">
-                                <input type="radio" id="attending-yes" v-model="attendance" value="yes"
-                                    class="mr-2 flex items-center" />
+                                <input type="radio" id="attending-yes" v-model="attendance" value="yes" class="mr-2" />
                                 <span class="text-sm">Я приду / Мы придем</span>
                             </label>
 
@@ -44,13 +43,11 @@
                         <div class="flex flex-wrap gap-4">
                             <div class="flex flex-col">
                                 <label for="firstName" class="mb-2">Имя:</label>
-                                <input type="text" id="firstName" v-model="firstName"
-                                    class="max-w-[130px] rounded-md border border-gray-300 px-2 py-2" />
+                                <input type="text" id="firstName" v-model="firstName" class="max-w-[130px] rounded-md border border-gray-300 px-2 py-2" />
                             </div>
                             <div class="flex flex-col">
                                 <label for="lastName" class="mb-2">Фамилия:</label>
-                                <input type="text" id="lastName" v-model="lastName"
-                                    class="max-w-[130px] rounded-md border border-gray-300 px-2 py-2" />
+                                <input type="text" id="lastName" v-model="lastName" class="max-w-[130px] rounded-md border border-gray-300 px-2 py-2" />
                             </div>
                         </div>
 
@@ -58,69 +55,62 @@
                             <div class="flex flex-wrap gap-4">
                                 <div class="flex flex-col">
                                     <label for="plusOneFirstName" class="mb-2">Имя партнера:</label>
-                                    <input type="text" id="plusOneFirstName" v-model="plusOneFirstName"
-                                        class="max-w-[150px] rounded-md border border-gray-300 px-2 py-2" />
+                                    <input type="text" id="plusOneFirstName" v-model="plusOneFirstName" class="max-w-[150px] rounded-md border border-gray-300 px-2 py-2" />
                                 </div>
                                 <div class="flex flex-col">
                                     <label for="plusOneLastName" class="mb-2">Фамилия партнера:</label>
-                                    <input type="text" id="plusOneLastName" v-model="plusOneLastName"
-                                        class="max-w-[150px] rounded-md border border-gray-300 px-2 py-2" />
+                                    <input type="text" id="plusOneLastName" v-model="plusOneLastName" class="max-w-[150px] rounded-md border border-gray-300 px-2 py-2" />
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="flex justify-center mt-16">
                         <span class="w-[640px] h-[1px] bg-gray-300 inline-block text-center clip-path-arrow"></span>
                     </div>
-                    <div class="drink-preferences-section mt-8 ">
+
+                    <div class="drink-preferences-section mt-8">
                         <h3 class="font-bold mb-1">Предпочтения в напитках</h3>
                         <span class="text-sm text-gray-500 bg-gray-200">можно выбрать несколько вариантов</span>
                         <div class="flex flex-wrap items-center mt-5">
                             <label for="redWine" class="flex items-center mb-2 mr-4">
-                                <input type="checkbox" id="redWine" v-model="drinkPreferences" value="redWine"
-                                    class="mr-2" />
+                                <input type="checkbox" id="redWine" v-model="drinkPreferences" value="redWine" class="mr-2" />
                                 <span class="text-sm">Красное вино</span>
                             </label>
 
-                            <label for="whiteWine" class=" flex items-center mb-2 mr-4">
-                                <input type="checkbox" id="whiteWine" v-model="drinkPreferences" value="whiteWine"
-                                    class="mr-2" />
+                            <label for="whiteWine" class="flex items-center mb-2 mr-4">
+                                <input type="checkbox" id="whiteWine" v-model="drinkPreferences" value="whiteWine" class="mr-2" />
                                 <span class="text-sm">Белое вино</span>
                             </label>
 
-                            <label for="cognac" class=" flex items-center mb-2 mr-4">
-                                <input type="checkbox" id="cognac" v-model="drinkPreferences" value="cognac"
-                                    class="mr-2" />
+                            <label for="cognac" class="flex items-center mb-2 mr-4">
+                                <input type="checkbox" id="cognac" v-model="drinkPreferences" value="cognac" class="mr-2" />
                                 <span class="text-sm">Коньяк</span>
                             </label>
 
-                            <label for="champagne" class=" flex items-center mb-2 mr-4">
-                                <input type="checkbox" id="champagne" v-model="drinkPreferences" value="champagne"
-                                    class="mr-2" />
+                            <label for="champagne" class="flex items-center mb-2 mr-4">
+                                <input type="checkbox" id="champagne" v-model="drinkPreferences" value="champagne" class="mr-2" />
                                 <span class="text-sm">Шампанское</span>
                             </label>
 
-                            <label for="nonAlcoholic" class=" flex items-center mb-2">
-                                <input type="checkbox" id="nonAlcoholic" v-model="drinkPreferences" value="nonAlcoholic"
-                                    class="mr-2" />
+                            <label for="nonAlcoholic" class="flex items-center mb-2">
+                                <input type="checkbox" id="nonAlcoholic" v-model="drinkPreferences" value="nonAlcoholic" class="mr-2" />
                                 <span class="text-sm">Что-то безалкогольное</span>
                             </label>
                         </div>
                     </div>
 
-                    <button type="submit"
-                        class=" mt-12 bg-black text-white hover:bg-white hover:border hover:text-black font-bold py-3 px-5">Отправить</button>
+                    <button type="submit" class="mt-12 bg-black text-white hover:bg-white hover:border hover:text-black font-bold py-3 px-5">Отправить</button>
                 </form>
             </div>
         </div>
-        <h1 class=" text-4xl font-serif my-12 flex justify-center mx-5 text-center">
-            МЫ БУДЕМ СЧАСТЛИВЫ ВИДЕТЬ ВАС!
-        </h1>
+        <h1 class="text-4xl font-serif my-12 flex justify-center mx-5 text-center">МЫ БУДЕМ СЧАСТЛИВЫ ВИДЕТЬ ВАС!</h1>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import axios from 'axios';
 
 const attendance = ref(null);
 const bringingPlusOne = ref(false);
@@ -130,25 +120,34 @@ const plusOneFirstName = ref('');
 const plusOneLastName = ref('');
 const drinkPreferences = ref([]);
 
-const onSubmit = () => {
-    console.log('Form submitted:', {
-        attendance: attendance.value,
-        bringingPlusOne: bringingPlusOne.value,
-        firstName: firstName.value,
-        lastName: lastName.value,
-        plusOneFirstName: plusOneFirstName.value,
-        plusOneLastName: plusOneLastName.value,
-        drinkPreferences: drinkPreferences.value,
-    });
+const onSubmit = async () => {
+    const formData = {
+        attending: attendance.value === 'yes',
+        attending_with_partner: bringingPlusOne.value,
+        first_name: firstName.value,
+        last_name: lastName.value,
+        partner_first_name: plusOneFirstName.value,
+        partner_last_name: plusOneLastName.value,
+        drink_preferences: drinkPreferences.value,
+    };
 
-    attendance.value = null;
-    bringingPlusOne.value = false;
-    firstName.value = '';
-    lastName.value = '';
-    plusOneFirstName.value = '';
-    plusOneLastName.value = '';
-    drinkPreferences.value = [];
+    try {
+        const response = await axios.post('https://y67534r6.beget.tech/api/responses', formData );
+        console.log('Response from POST:', response.data);
+        await fetchResponses(); 
+    } catch (error) {
+        console.error('Ошибка при отправке данных:', error);
+    }
 };
+
+// const fetchResponses = async () => {
+//     try {
+//         const response = await axios.get('https://y67534r6.beget.tech/api/responses');
+//         console.log('Response from GET:', response.data);
+//     } catch (error) {
+//         console.error('Ошибка при получении данных:', error);
+//     }
+// };
 </script>
 
 <style scoped>
