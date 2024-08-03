@@ -175,6 +175,7 @@ const onSubmit = async () => {
         const response = await axios.post('http://y67534r6.beget.tech/api/responses', { formData: formData });
         console.log('Response from POST:', response.data);
         attending.value = null;
+        
         bringingPlusOne.value = false;
         firstName.value = '';
         lastName.value = '';
