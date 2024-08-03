@@ -5,9 +5,7 @@
       <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
         <div class="text-white text-center px-4 font-serif">
           <span class="block text-6xl mt-12 mb-3">Дорогие гости!</span>
-          <span class="block text-xl mt-12 mx-5">В нашей жизни предстоят счастливые перемены! Мы хотим, чтобы в этот
-            день рядом с нами были самые близкие и дорогие для нас люди. Будем
-            рады разделить с вами чудесный праздник в день нашей свадьбы.</span>
+          <span class="block text-xl mt-12 mx-5">С большой радостью и трепетом мы приглашаем вас разделить с нами особенный день — день нашей свадьбы. В этот момент, который станет началом нашего совместного пути, мы будем счастливы видеть вас рядом, чтобы вместе отпраздновать наше счастье и любовь.</span>
           <span class="font-bold block my-8 text-xl">7 Сентября 2024 года</span>
           <span class="block mt-4 text-xl">С любовью, <i class="text-xl font-serif font-extrabold text-gray-300 shadow-lg">София и Александр</i></span>
           <div class="countdown-container mt-4">

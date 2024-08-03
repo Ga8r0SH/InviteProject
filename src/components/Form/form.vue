@@ -14,23 +14,28 @@
                 <img src="../../assets/Image/photo_2024-06-21_13-22-18.jpg" alt="" class="w-full h-full object-cover">
             </div>
             <div class="ml-8 w-2/3">
-                <p class="text-gray-600 mt-8 text-xl">Мы будем ждать от вас ответ до 23/06/2024</p>
+                <p class="text-gray-600 mt-8 text-xl">
+                    <span class=" font-semibold">
+                        Мы будем ждать точный ответ до 15. 08. 2024,
+                    </span>
+                    <br> чтобы мы могли учесть все пожелания и организовать наше торжество наилучшим образом.
+                </p>
                 <form @submit.prevent="onSubmit" class="my-8 font-serif">
                     <div class="attendance-section">
                         <h3 class="mb-4 text-xl font-serif">Присутствие на торжестве</h3>
                         <div class="flex flex-col">
                             <label for="attending-yes" class="flex items-center mb-2">
-                                <input type="radio" id="attending-yes" v-model="attendance" value="yes" class="mr-2" />
+                                <input type="radio" id="attending-yes" v-model="attending" :value="true" class="mr-2" />
                                 <span class="text-sm">Я приду / Мы придем</span>
                             </label>
 
                             <label for="attending-no" class="flex items-center">
-                                <input type="radio" id="attending-no" v-model="attendance" value="no" class="mr-2" />
+                                <input type="radio" id="attending-no" v-model="attending" :value="false" class="mr-2" />
                                 <span class="text-sm">Прийти не получится</span>
                             </label>
                         </div>
 
-                        <div class="plus-one-option mt-4 pl-5" v-if="attendance === 'yes'">
+                        <div class="plus-one-option mt-4 pl-5" v-if="attending">
                             <label for="bringing-plus-one" class="flex items-center">
                                 <input type="checkbox" id="bringing-plus-one" v-model="bringingPlusOne" class="mx-2" />
                                 <span class="text-sm">Я приду с партнером (+1)</span>
@@ -43,11 +48,13 @@
                         <div class="flex flex-wrap gap-4">
                             <div class="flex flex-col">
                                 <label for="firstName" class="mb-2">Имя:</label>
-                                <input type="text" id="firstName" v-model="firstName" class="max-w-[130px] rounded-md border border-gray-300 px-2 py-2" />
+                                <input type="text" id="firstName" v-model="firstName"
+                                    class="max-w-[130px] rounded-md border border-gray-300 px-2 py-2" />
                             </div>
                             <div class="flex flex-col">
                                 <label for="lastName" class="mb-2">Фамилия:</label>
-                                <input type="text" id="lastName" v-model="lastName" class="max-w-[130px] rounded-md border border-gray-300 px-2 py-2" />
+                                <input type="text" id="lastName" v-model="lastName"
+                                    class="max-w-[130px] rounded-md border border-gray-300 px-2 py-2" />
                             </div>
                         </div>
 
@@ -55,11 +62,13 @@
                             <div class="flex flex-wrap gap-4">
                                 <div class="flex flex-col">
                                     <label for="plusOneFirstName" class="mb-2">Имя партнера:</label>
-                                    <input type="text" id="plusOneFirstName" v-model="plusOneFirstName" class="max-w-[150px] rounded-md border border-gray-300 px-2 py-2" />
+                                    <input type="text" id="plusOneFirstName" v-model="plusOneFirstName"
+                                        class="max-w-[150px] rounded-md border border-gray-300 px-2 py-2" />
                                 </div>
                                 <div class="flex flex-col">
                                     <label for="plusOneLastName" class="mb-2">Фамилия партнера:</label>
-                                    <input type="text" id="plusOneLastName" v-model="plusOneLastName" class="max-w-[150px] rounded-md border border-gray-300 px-2 py-2" />
+                                    <input type="text" id="plusOneLastName" v-model="plusOneLastName"
+                                        class="max-w-[150px] rounded-md border border-gray-300 px-2 py-2" />
                                 </div>
                             </div>
                         </div>
@@ -74,37 +83,45 @@
                         <span class="text-sm text-gray-500 bg-gray-200">можно выбрать несколько вариантов</span>
                         <div class="flex flex-wrap items-center mt-5">
                             <label for="redWine" class="flex items-center mb-2 mr-4">
-                                <input type="checkbox" id="redWine" v-model="drinkPreferences" value="redWine" class="mr-2" />
+                                <input type="checkbox" id="redWine" v-model="drinkPreferences" value="redWine"
+                                    class="mr-2" />
                                 <span class="text-sm">Красное вино</span>
                             </label>
 
                             <label for="whiteWine" class="flex items-center mb-2 mr-4">
-                                <input type="checkbox" id="whiteWine" v-model="drinkPreferences" value="whiteWine" class="mr-2" />
+                                <input type="checkbox" id="whiteWine" v-model="drinkPreferences" value="whiteWine"
+                                    class="mr-2" />
                                 <span class="text-sm">Белое вино</span>
                             </label>
 
                             <label for="cognac" class="flex items-center mb-2 mr-4">
-                                <input type="checkbox" id="cognac" v-model="drinkPreferences" value="cognac" class="mr-2" />
+                                <input type="checkbox" id="cognac" v-model="drinkPreferences" value="cognac"
+                                    class="mr-2" />
                                 <span class="text-sm">Коньяк</span>
                             </label>
 
                             <label for="champagne" class="flex items-center mb-2 mr-4">
-                                <input type="checkbox" id="champagne" v-model="drinkPreferences" value="champagne" class="mr-2" />
+                                <input type="checkbox" id="champagne" v-model="drinkPreferences" value="champagne"
+                                    class="mr-2" />
                                 <span class="text-sm">Шампанское</span>
                             </label>
 
                             <label for="nonAlcoholic" class="flex items-center mb-2">
-                                <input type="checkbox" id="nonAlcoholic" v-model="drinkPreferences" value="nonAlcoholic" class="mr-2" />
+                                <input type="checkbox" id="nonAlcoholic" v-model="drinkPreferences" value="nonAlcoholic"
+                                    class="mr-2" />
                                 <span class="text-sm">Что-то безалкогольное</span>
                             </label>
                         </div>
                     </div>
 
-                    <button type="submit" class="mt-12 bg-black text-white hover:bg-white hover:border hover:text-black font-bold py-3 px-5">Отправить</button>
+                    <button type="submit"
+                        class="mt-12 bg-black text-white hover:bg-white hover:border hover:text-black font-bold py-3 px-5">Отправить</button>
                 </form>
             </div>
         </div>
-        <h1 class="text-4xl font-serif my-12 flex justify-center mx-5 text-center">МЫ БУДЕМ СЧАСТЛИВЫ ВИДЕТЬ ВАС!</h1>
+        <h1 class="text-4xl font-serif my-12 flex justify-center mx-5 text-center">
+            Благодарим вас и с нетерпением ждем встречи на нашем празднике!
+        </h1>
     </div>
 </template>
 
@@ -112,7 +129,7 @@
 import { ref } from 'vue';
 import axios from 'axios';
 
-const attendance = ref(null);
+const attending = ref(null);
 const bringingPlusOne = ref(false);
 const firstName = ref('');
 const lastName = ref('');
@@ -122,7 +139,7 @@ const drinkPreferences = ref([]);
 
 const onSubmit = async () => {
     const formData = {
-        attending: attendance.value === 'yes',
+        attending: attending.value,
         attending_with_partner: bringingPlusOne.value,
         first_name: firstName.value,
         last_name: lastName.value,
@@ -131,23 +148,23 @@ const onSubmit = async () => {
         drink_preferences: drinkPreferences.value,
     };
 
+    console.log('Sending form data:', formData);
+
     try {
-        const response = await axios.post('https://y67534r6.beget.tech/api/responses', formData );
+        const response = await axios.post('http://y67534r6.beget.tech/api/responses', { formData: formData });
         console.log('Response from POST:', response.data);
-        await fetchResponses(); 
+        attending.value = null;
+        bringingPlusOne.value = false;
+        firstName.value = '';
+        lastName.value = '';
+        plusOneFirstName.value = '';
+        plusOneLastName.value = '';
+        drinkPreferences.value = [];
+
     } catch (error) {
         console.error('Ошибка при отправке данных:', error);
     }
 };
-
-// const fetchResponses = async () => {
-//     try {
-//         const response = await axios.get('https://y67534r6.beget.tech/api/responses');
-//         console.log('Response from GET:', response.data);
-//     } catch (error) {
-//         console.error('Ошибка при получении данных:', error);
-//     }
-// };
 </script>
 
 <style scoped>

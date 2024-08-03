@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="max-w-screen-xl m-auto">
         <div>
             <h1 class="text-center my-14 font-serif text-4xl">
@@ -21,4 +21,4 @@
         </div>
 
     </div>
-</template>
+</template> -->
