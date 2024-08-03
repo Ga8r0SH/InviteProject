@@ -16,7 +16,7 @@
         </div>
         <div class="mt-[40px] flex justify-center">
             <span class="text-[20px] font-serif text-gray-600 text-center">Он находится по адресу: Кирсова ул.
-                Олимпийская 86 б.</span>
+                Олимпийская 86 б .</span>
         </div>
         <div class="mt-[40px] flex justify-center px-4">
             <img class="border-8" src="https://www.virtualtur.md/kcfinder/upload/images/_MG_7526.jpg" alt="">
