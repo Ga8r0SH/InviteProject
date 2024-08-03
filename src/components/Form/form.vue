@@ -15,7 +15,7 @@
             </div>
             <div class="ml-8 w-2/3">
                 <p class="text-gray-600 mt-8 text-xl">
-                    <span class=" font-semibold">
+                    <span class="font-semibold">
                         Мы будем ждать точный ответ до 15. 08. 2024,
                     </span>
                     <br> чтобы мы могли учесть все пожелания и организовать наше торжество наилучшим образом.
@@ -74,6 +74,12 @@
                         </div>
                     </div>
 
+                    <div v-if="errors.length" class="bg-red-100 text-red-700 p-4 border border-red-300 rounded mt-4">
+                        <ul>
+                            <li v-for="error in errors" :key="error">{{ error }}</li>
+                        </ul>
+                    </div>
+
                     <div class="flex justify-center mt-16">
                         <span class="w-[640px] h-[1px] bg-gray-300 inline-block text-center clip-path-arrow"></span>
                     </div>
@@ -125,8 +131,9 @@
     </div>
 </template>
 
+
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import axios from 'axios';
 
 const attending = ref(null);
@@ -136,8 +143,24 @@ const lastName = ref('');
 const plusOneFirstName = ref('');
 const plusOneLastName = ref('');
 const drinkPreferences = ref([]);
+const errors = ref([]);
+
+const isValid = computed(() => {
+    errors.value = [];
+    if (attending.value === null) errors.value.push('Необходимо указать, будете ли вы присутствовать.');
+    if (attending.value && !firstName.value) errors.value.push('Необходимо указать ваше имя.');
+    if (attending.value && !lastName.value) errors.value.push('Необходимо указать вашу фамилию.');
+    if (attending.value && bringingPlusOne.value && (!plusOneFirstName.value || !plusOneLastName.value)) {
+        errors.value.push('Необходимо указать имя и фамилию партнера.');
+    }
+    return errors.value.length === 0;
+});
 
 const onSubmit = async () => {
+    if (!isValid.value) {
+        return; 
+    }
+
     const formData = {
         attending: attending.value,
         attending_with_partner: bringingPlusOne.value,
@@ -147,8 +170,6 @@ const onSubmit = async () => {
         partner_last_name: plusOneLastName.value,
         drink_preferences: drinkPreferences.value,
     };
-
-    console.log('Sending form data:', formData);
 
     try {
         const response = await axios.post('http://y67534r6.beget.tech/api/responses', { formData: formData });
@@ -160,7 +181,6 @@ const onSubmit = async () => {
         plusOneFirstName.value = '';
         plusOneLastName.value = '';
         drinkPreferences.value = [];
-
     } catch (error) {
         console.error('Ошибка при отправке данных:', error);
     }
