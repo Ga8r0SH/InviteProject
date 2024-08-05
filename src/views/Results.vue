@@ -52,7 +52,7 @@
   
   const fetchGuests = async () => {
     try {
-      const response = await axios.get('http://y67534r6.beget.tech/api/responses');
+      const response = await axios.get('https://alexandrsofia.dif.md/api/responses');
       guests.value = response.data;
     } catch (err) {
       error.value = 'Не удалось загрузить данные.';
@@ -63,7 +63,7 @@
   
   const deleteGuest = async (id) => {
     try {
-      await axios.delete(`http://y67534r6.beget.tech/api/responses/${id}`);
+      await axios.delete(`https://alexandrsofia.dif.md/api/responses/${id}`);
       guests.value = guests.value.filter(guest => guest.id !== id);
     } catch (err) {
       error.value = 'Не удалось удалить гостя.';
