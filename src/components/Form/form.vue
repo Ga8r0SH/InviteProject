@@ -182,6 +182,7 @@ const onSubmit = async () => {
         plusOneFirstName.value = '';
         plusOneLastName.value = '';
         drinkPreferences.value = [];
+        alert('Спасибо за ответ')
     } catch (error) {
         console.error('Ошибка при отправке данных:', error);
     }
